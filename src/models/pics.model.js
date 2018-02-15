@@ -17,6 +17,10 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: false
       },
+      company: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
       job: {
         type: DataTypes.STRING,
         allowNull: false

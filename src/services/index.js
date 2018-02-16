@@ -16,6 +16,7 @@ const pipelineProducts = require('./pipeline-products/pipeline-products.service.
 const questions = require('./questions/questions.service.js');
 const answers = require('./answers/answers.service.js');
 const pics = require('./pics/pics.service.js');
+const teams = require('./teams/teams.service.js');
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -36,4 +37,5 @@ module.exports = function () {
   app.configure(questions);
   app.configure(answers);
   app.configure(pics);
+  app.configure(teams);
 };

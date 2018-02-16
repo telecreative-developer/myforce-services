@@ -44,6 +44,7 @@ module.exports = function (app) {
     pipelines.hasMany(models.status, {foreignKey: 'id_status', sourceKey: 'id_status'});
     pipelines.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
     pipelines.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
+    pipelines.hasMany(models.pics, {foreignKey: 'id_pic', sourceKey: 'id_pic'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

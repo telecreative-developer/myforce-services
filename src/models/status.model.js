@@ -14,10 +14,6 @@ module.exports = function (app) {
     status: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    id_question: {
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
   }, {
     hooks: {

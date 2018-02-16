@@ -14,6 +14,10 @@ module.exports = function (app) {
     question: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    step: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     hooks: {

@@ -74,7 +74,7 @@ module.exports = function(app) {
         type: DataTypes.INTEGER,
         allowNull: true
       },
-      id_team: {
+      id_branch: {
         type: DataTypes.INTEGER,
         allowNull: true
       },
@@ -103,6 +103,10 @@ module.exports = function(app) {
     users.hasMany(models.regionals, {
       foreignKey: "id_region",
       sourceKey: "id_region"
+    });
+    users.hasMany(models.branches, {
+      foreignKey: "id_branch",
+      sourceKey: "id_branch"
     });
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };

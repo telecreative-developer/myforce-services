@@ -36,6 +36,10 @@ module.exports = function(app) {
       address: {
         type: DataTypes.TEXT,
         allowNull: false
+      },
+      id_customer: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     },
     {
@@ -49,7 +53,7 @@ module.exports = function(app) {
 
   pics.associate = function(models) {
     // eslint-disable-line no-unused-vars
-    // Define associations here
+    pics.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

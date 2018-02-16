@@ -23,6 +23,10 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    id_pic: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     id: {
       type: DataTypes.INTEGER,
       allowNull: false

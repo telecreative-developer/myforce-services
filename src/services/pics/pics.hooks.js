@@ -1,8 +1,10 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 
+const relationshipPics = require('../../hooks/relationship-pics');
+
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [authenticate('jwt'), relationshipPics()],
     find: [],
     get: [],
     create: [],

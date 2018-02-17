@@ -2,7 +2,6 @@ const users = require('./users/users.service.js');
 const products = require('./products/products.service.js');
 const invoices = require('./invoices/invoices.service.js');
 const subproducts = require('./subproducts/subproducts.service.js');
-const status = require('./status/status.service.js');
 const customers = require('./customers/customers.service.js');
 const jobslevel = require('./jobslevel/jobslevel.service.js');
 const uploadCustomerAvatar = require('./upload-customer-avatar/upload-customer-avatar.service.js');
@@ -19,13 +18,14 @@ const pics = require('./pics/pics.service.js');
 
 const branches = require('./branches/branches.service.js');
 
+const sellingProcess = require('./selling-process/selling-process.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
   app.configure(products);
   app.configure(invoices);
   app.configure(subproducts);
-  app.configure(status);
   app.configure(customers);
   app.configure(jobslevel);
   app.configure(uploadCustomerAvatar);
@@ -40,4 +40,5 @@ module.exports = function () {
   app.configure(answers);
   app.configure(pics);
   app.configure(branches);
+  app.configure(sellingProcess);
 };

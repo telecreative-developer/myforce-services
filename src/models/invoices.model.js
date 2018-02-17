@@ -18,10 +18,6 @@ module.exports = function (app) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    id_status: {
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
   }, {
     hooks: {
@@ -34,7 +30,6 @@ module.exports = function (app) {
   invoices.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
     invoices.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
-    invoices.hasMany(models.status, {foreignKey: 'id_status', sourceKey: 'id_status'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

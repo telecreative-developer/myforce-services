@@ -15,9 +15,10 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    id_status: {
+    step: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 1
     },
     id_customer: {
       type: DataTypes.INTEGER,
@@ -41,7 +42,6 @@ module.exports = function (app) {
 
   pipelines.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
-    pipelines.hasMany(models.status, {foreignKey: 'id_status', sourceKey: 'id_status'});
     pipelines.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
     pipelines.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     pipelines.hasMany(models.pics, {foreignKey: 'id_pic', sourceKey: 'id_pic'});

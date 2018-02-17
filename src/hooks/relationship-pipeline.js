@@ -7,7 +7,6 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     hook.params.sequelize = {
       raw: false,
       include: [
-        hook.app.services.status.Model,
         hook.app.services.customers.Model,
         hook.app.services.users.Model,
         hook.app.services.pics.Model

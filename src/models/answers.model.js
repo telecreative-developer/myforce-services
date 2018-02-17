@@ -15,6 +15,10 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    activity_desc: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
     id_pipeline: {
       type: DataTypes.INTEGER,
       allowNull: false

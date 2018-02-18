@@ -4,9 +4,9 @@ const relationshipSubproducts = require('../../hooks/relationship-subproducts');
 
 module.exports = {
   before: {
-    all: [authenticate('jwt'), relationshipSubproducts()],
-    find: [],
-    get: [],
+    all: [authenticate('jwt')],
+    find: [relationshipSubproducts()],
+    get: [relationshipSubproducts()],
     create: [],
     update: [],
     patch: [],

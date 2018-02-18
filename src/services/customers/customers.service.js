@@ -6,14 +6,13 @@ const hooks = require('./customers.hooks');
 module.exports = function () {
   const app = this;
   const Model = createModel(app);
+  const paginate = app.get('paginate');
 
   const options = {
     name: 'customers',
+    id: 'id_customer',
     Model,
-    paginate: {
-      default: 1000,
-      max: 2000
-    }
+    paginate
   };
 
   // Initialize our service with any options it requires

@@ -3,7 +3,6 @@ const products = require('./products/products.service.js');
 const invoices = require('./invoices/invoices.service.js');
 const subproducts = require('./subproducts/subproducts.service.js');
 const customers = require('./customers/customers.service.js');
-const jobslevel = require('./jobslevel/jobslevel.service.js');
 const uploadCustomerAvatar = require('./upload-customer-avatar/upload-customer-avatar.service.js');
 const uploadProductPicture = require('./upload-product-picture/upload-product-picture.service.js');
 const uploadSubproductPicture = require('./upload-subproduct-picture/upload-subproduct-picture.service.js');
@@ -27,7 +26,6 @@ module.exports = function () {
   app.configure(invoices);
   app.configure(subproducts);
   app.configure(customers);
-  app.configure(jobslevel);
   app.configure(uploadCustomerAvatar);
   app.configure(uploadProductPicture);
   app.configure(uploadSubproductPicture);

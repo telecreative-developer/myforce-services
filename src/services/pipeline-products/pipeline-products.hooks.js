@@ -4,9 +4,9 @@ const relationshipPipelineProducts = require('../../hooks/relationship-pipeline-
 
 module.exports = {
   before: {
-    all: [authenticate('jwt'), relationshipPipelineProducts()],
-    find: [],
-    get: [],
+    all: [authenticate('jwt')],
+    find: [relationshipPipelineProducts()],
+    get: [relationshipPipelineProducts()],
     create: [],
     update: [],
     patch: [],

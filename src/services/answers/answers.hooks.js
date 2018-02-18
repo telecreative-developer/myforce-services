@@ -4,9 +4,9 @@ const realtionshipAnswers = require('../../hooks/realtionship-answers');
 
 module.exports = {
   before: {
-    all: [authenticate('jwt'), realtionshipAnswers()],
-    find: [],
-    get: [],
+    all: [authenticate('jwt')],
+    find: [realtionshipAnswers()],
+    get: [realtionshipAnswers()],
     create: [],
     update: [],
     patch: [],

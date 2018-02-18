@@ -10,6 +10,7 @@ module.exports = function () {
 
   const options = {
     name: 'regionals',
+    id: 'id_region',
     Model,
     paginate
   };

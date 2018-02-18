@@ -20,6 +20,11 @@ module.exports = function (app) {
       allowNull: false,
       defaultValue: 1
     },
+    step_process: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
     id_customer: {
       type: DataTypes.INTEGER,
       allowNull: false

@@ -4,9 +4,9 @@ const relationshipInvoices = require('../../hooks/relationship-invoices');
 
 module.exports = {
   before: {
-    all: [authenticate('jwt'), relationshipInvoices()],
-    find: [],
-    get: [],
+    all: [authenticate('jwt')],
+    find: [relationshipInvoices()],
+    get: [relationshipInvoices()],
     create: [],
     update: [],
     patch: [],

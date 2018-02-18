@@ -15,9 +15,9 @@ const relationshipUsers = require('../../hooks/relationship-users');
 
 module.exports = {
   before: {
-    all: [relationshipUsers()],
-    find: [ authenticate('jwt') ],
-    get: [ ...restrict ],
+    all: [],
+    find: [authenticate('jwt'), relationshipUsers()],
+    get: [ ...restrict, relationshipUsers() ],
     create: [ hashPassword() ],
     update: [ ...restrict, hashPassword() ],
     patch: [ ...restrict, hashPassword() ],

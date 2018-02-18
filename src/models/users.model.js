@@ -66,10 +66,6 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      id_joblevel: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-      },
       id_region: {
         type: DataTypes.INTEGER,
         allowNull: true
@@ -96,10 +92,6 @@ module.exports = function(app) {
   users.associate = function(models) {
     // eslint-disable-line no-unused-vars
     // Define associations here
-    users.hasMany(models.jobslevel, {
-      foreignKey: "id_joblevel",
-      sourceKey: "id_joblevel"
-    });
     users.hasMany(models.regionals, {
       foreignKey: "id_region",
       sourceKey: "id_region"

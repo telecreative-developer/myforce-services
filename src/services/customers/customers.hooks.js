@@ -4,9 +4,9 @@ const relationshipCustomers = require('../../hooks/relationship-customers');
 
 module.exports = {
   before: {
-    all: [authenticate('jwt'), relationshipCustomers()],
-    find: [],
-    get: [],
+    all: [authenticate('jwt')],
+    find: [relationshipCustomers()],
+    get: [relationshipCustomers()],
     create: [],
     update: [],
     patch: [],

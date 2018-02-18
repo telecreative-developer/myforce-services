@@ -4,9 +4,9 @@ const relationshipPics = require('../../hooks/relationship-pics');
 
 module.exports = {
   before: {
-    all: [authenticate('jwt'), relationshipPics()],
-    find: [],
-    get: [],
+    all: [authenticate('jwt')],
+    find: [relationshipPics()],
+    get: [relationshipPics()],
     create: [],
     update: [],
     patch: [],

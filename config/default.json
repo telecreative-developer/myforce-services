@@ -3,8 +3,8 @@
   "port": 3040,
   "public": "../public/",
   "paginate": {
-    "default": 10,
-    "max": 50
+    "default": 2000,
+    "max": 2500
   },
   "mysql": "mysql://root:@localhost:3306/myforce",
   "authentication": {

@@ -8,7 +8,10 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
       raw: false,
       include: [
         hook.app.services.pipelines.Model,
-        hook.app.services.products.Model
+        hook.app.services.products.Model,
+        hook.app.services.customers.Model,
+        hook.app.services.subproducts.Model,
+        hook.app.services.users.Model
       ]
     };
     // that resolves with the `hook` object for asynchronous operations

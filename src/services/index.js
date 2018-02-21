@@ -19,6 +19,12 @@ const branches = require('./branches/branches.service.js');
 
 const sellingProcess = require('./selling-process/selling-process.service.js');
 
+const teamUpdates = require('./team-updates/team-updates.service.js');
+
+const targets = require('./targets/targets.service.js');
+
+const events = require('./events/events.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -39,4 +45,7 @@ module.exports = function () {
   app.configure(pics);
   app.configure(branches);
   app.configure(sellingProcess);
+  app.configure(teamUpdates);
+  app.configure(targets);
+  app.configure(events);
 };

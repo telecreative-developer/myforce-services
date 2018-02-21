@@ -25,6 +25,19 @@ module.exports = function (app) {
       allowNull: false,
       defaultValue: false
     },
+    lose: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
+    },
+    month: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    year: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     id_customer: {
       type: DataTypes.INTEGER,
       allowNull: false
@@ -35,6 +48,11 @@ module.exports = function (app) {
     },
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    total: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
       allowNull: false
     }
   }, {

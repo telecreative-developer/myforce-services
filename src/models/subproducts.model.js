@@ -27,6 +27,10 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    file: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
     id_product: {
       type: DataTypes.INTEGER,
       allowNull: false

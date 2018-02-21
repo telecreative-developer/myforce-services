@@ -17,7 +17,19 @@ module.exports = function(app) {
         type: DataTypes.INTEGER,
         allowNull: false
       },
+      id_customer: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       id_product: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      id_subproduct: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false
       }
@@ -33,6 +45,11 @@ module.exports = function(app) {
 
   pipelineProducts.associate = function(models) {
     // eslint-disable-line no-unused-vars
+    pipelineProducts.hasMany(models.pipelines, {foreignKey: 'id_pipeline', sourceKey: 'id_pipeline'});
+    pipelineProducts.hasMany(models.products, {foreignKey: 'id_product', sourceKey: 'id_product'});
+    pipelineProducts.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
+    pipelineProducts.hasMany(models.subproducts, {foreignKey: 'id_subproduct', sourceKey: 'id_subproduct'});
+    pipelineProducts.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };

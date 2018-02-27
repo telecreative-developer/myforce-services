@@ -1,14 +1,16 @@
 // Use this hook to manipulate incoming or outgoing data.
 // For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
 
+// eslint-disable-next-line no-unused-vars
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
-  return function realtionshipAnswers (hook) {
+  return function relationshipAnswers (hook) {
     // Hooks can either return nothing or a promise
     hook.params.sequelize = {
       raw: false,
       include: [
         hook.app.services.pipelines.Model,
         hook.app.services.questions.Model,
+        hook.app.services.customers.Model,
         hook.app.services.users.Model
       ]
     };

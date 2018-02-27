@@ -46,6 +46,7 @@ module.exports = function (app) {
   answers.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
     answers.hasMany(models.pipelines, {foreignKey: 'id_pipeline', sourceKey: 'id_pipeline'});
+    answers.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
     answers.hasMany(models.questions, {foreignKey: 'id_question', sourceKey: 'id_question'});
     answers.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/

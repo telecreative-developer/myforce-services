@@ -1,12 +1,12 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 
-const realtionshipAnswers = require('../../hooks/realtionship-answers');
+const relationshipAnswers = require('../../hooks/relationship-answers');
 
 module.exports = {
   before: {
     all: [authenticate('jwt')],
-    find: [realtionshipAnswers()],
-    get: [realtionshipAnswers()],
+    find: [relationshipAnswers()],
+    get: [relationshipAnswers()],
     create: [],
     update: [],
     patch: [],

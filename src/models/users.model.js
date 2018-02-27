@@ -1,12 +1,12 @@
 // See http://docs.sequelizejs.com/en/latest/docs/models-definition/
 // for more of what you can do here.
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
 module.exports = function(app) {
-  const sequelizeClient = app.get("sequelizeClient");
+  const sequelizeClient = app.get('sequelizeClient');
   const users = sequelizeClient.define(
-    "users",
+    'users',
     {
       first_name: {
         type: DataTypes.STRING,
@@ -66,17 +66,8 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      id_region: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-      },
       id_branch: {
         type: DataTypes.INTEGER,
-        allowNull: true
-      },
-      manager: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
         allowNull: true
       }
     },
@@ -92,13 +83,9 @@ module.exports = function(app) {
   users.associate = function(models) {
     // eslint-disable-line no-unused-vars
     // Define associations here
-    users.hasMany(models.regionals, {
-      foreignKey: "id_region",
-      sourceKey: "id_region"
-    });
     users.hasMany(models.branches, {
-      foreignKey: "id_branch",
-      sourceKey: "id_branch"
+      foreignKey: 'id_branch',
+      sourceKey: 'id_branch'
     });
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };

@@ -1,10 +1,12 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
 
+const relationshipBranches = require('../../hooks/relationship-branches');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
-    find: [],
-    get: [],
+    find: [relationshipBranches()],
+    get: [relationshipBranches()],
     create: [],
     update: [],
     patch: [],

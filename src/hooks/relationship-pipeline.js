@@ -9,7 +9,8 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
       include: [
         hook.app.services.customers.Model,
         hook.app.services.users.Model,
-        hook.app.services.pics.Model
+        hook.app.services.pics.Model,
+        hook.app.services.branches.Model
       ]
     };
     // that resolves with the `hook` object for asynchronous operations

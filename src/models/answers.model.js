@@ -27,6 +27,10 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    id_customer: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     id: {
       type: DataTypes.INTEGER,
       allowNull: false

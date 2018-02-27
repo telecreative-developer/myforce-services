@@ -15,6 +15,10 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    id_manager: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
   }, {
     hooks: {
       beforeCount(options) {
@@ -26,6 +30,7 @@ module.exports = function (app) {
   // eslint-disable-next-line no-unused-vars
   branches.associate = function (models) {
     // Define associations here
+    branches.hasMany(models.managers, {foreignKey: 'id_manager', sourceKey: 'id_manager'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

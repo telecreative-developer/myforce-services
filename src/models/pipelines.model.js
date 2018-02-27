@@ -50,6 +50,10 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    id_branch: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     total: {
       type: DataTypes.INTEGER,
       defaultValue: 0,
@@ -68,6 +72,7 @@ module.exports = function (app) {
     pipelines.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
     pipelines.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     pipelines.hasMany(models.pics, {foreignKey: 'id_pic', sourceKey: 'id_pic'});
+    pipelines.hasMany(models.branches, {foreignKey: 'id_branch', sourceKey: 'id_branch'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

@@ -22,6 +22,8 @@ const events = require('./events/events.service.js');
 
 const managers = require('./managers/managers.service.js');
 
+const points = require('./points/points.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -41,4 +43,5 @@ module.exports = function () {
   app.configure(targets);
   app.configure(events);
   app.configure(managers);
+  app.configure(points);
 };

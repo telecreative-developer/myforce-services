@@ -54,10 +54,6 @@ module.exports = function(app) {
         type: DataTypes.TEXT,
         allowNull: true
       },
-      point: {
-        type: DataTypes.INTEGER,
-        allowNull: true
-      },
       bank_name: {
         type: DataTypes.STRING,
         allowNull: false

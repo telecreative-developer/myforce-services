@@ -5,29 +5,21 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const answers = sequelizeClient.define('answers', {
-    id_answer: {
+  const points = sequelizeClient.define('points', {
+    id_point: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
-    answer: {
-      type: DataTypes.STRING,
+    point: {
+      type: DataTypes.INTEGER,
       allowNull: false
     },
-    activity_desc: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    step: {
+    id_branch: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
     id_pipeline: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    id_question: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
@@ -47,14 +39,15 @@ module.exports = function (app) {
     }
   });
 
-  answers.associate = function (models) { // eslint-disable-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
+  points.associate = function (models) {
     // Define associations here
-    answers.hasMany(models.pipelines, {foreignKey: 'id_pipeline', sourceKey: 'id_pipeline'});
-    answers.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
-    answers.hasMany(models.questions, {foreignKey: 'id_question', sourceKey: 'id_question'});
-    answers.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
+    points.hasMany(models.branches, {foreignKey: 'id_branch', sourceKey: 'id_branch'});
+    points.hasMany(models.pipelines, {foreignKey: 'id_pipeline', sourceKey: 'id_pipeline'});
+    points.hasMany(models.customers, {foreignKey: 'id_customer', sourceKey: 'id_customer'});
+    points.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return answers;
+  return points;
 };

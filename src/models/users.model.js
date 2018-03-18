@@ -34,6 +34,10 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: true
       },
+      cover: {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
       phone: {
         type: DataTypes.STRING,
         allowNull: false
@@ -62,6 +66,10 @@ module.exports = function(app) {
         type: DataTypes.STRING,
         allowNull: false
       },
+      id_check: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+      },
       id_branch: {
         type: DataTypes.INTEGER,
         allowNull: true
@@ -79,6 +87,10 @@ module.exports = function(app) {
   users.associate = function(models) {
     // eslint-disable-line no-unused-vars
     // Define associations here
+    users.hasMany(models.checks, {
+      foreignKey: 'id_check',
+      sourceKey: 'id_check'
+    });
     users.hasMany(models.branches, {
       foreignKey: 'id_branch',
       sourceKey: 'id_branch'

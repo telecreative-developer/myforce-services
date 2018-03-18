@@ -24,6 +24,10 @@ const managers = require('./managers/managers.service.js');
 
 const points = require('./points/points.service.js');
 
+const checks = require('./checks/checks.service.js');
+
+const uploadCoverUser = require('./upload-cover-user/upload-cover-user.service.js');
+
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
@@ -44,4 +48,6 @@ module.exports = function () {
   app.configure(events);
   app.configure(managers);
   app.configure(points);
+  app.configure(checks);
+  app.configure(uploadCoverUser);
 };

@@ -38,6 +38,10 @@ module.exports = function (app) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    id_branch: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     hooks: {
@@ -50,6 +54,7 @@ module.exports = function (app) {
   customers.associate = function (models) { // eslint-disable-line no-unused-vars
     // Define associations here
     customers.hasMany(models.users, {foreignKey: 'id', sourceKey: 'id'});
+    customers.hasMany(models.branches, { foreignKey: 'id_branch', sourceKey: 'id_branch' });
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

@@ -38,6 +38,15 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    reject_status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false
+    },
+    reject_message: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
     id_customer: {
       type: DataTypes.INTEGER,
       allowNull: false

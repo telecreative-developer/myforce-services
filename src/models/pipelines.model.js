@@ -43,6 +43,23 @@ module.exports = function (app) {
       defaultValue: false,
       allowNull: false
     },
+    install_date: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    probability: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    reject_type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    pipeline_status: {
+      type: DataTypes.INTEGER,
+      defaultValue: false,
+      allowNull: false
+    },
     reject_message: {
       type: DataTypes.TEXT,
       allowNull: true

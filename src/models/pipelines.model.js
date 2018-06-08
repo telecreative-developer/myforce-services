@@ -29,6 +29,10 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
+    install_date: {
+      type: DataTypes.DATE,
+      allowNull: true
+    },
     year: {
       type: DataTypes.INTEGER,
       allowNull: false

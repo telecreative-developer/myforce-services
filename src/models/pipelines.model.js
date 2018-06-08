@@ -40,7 +40,7 @@ module.exports = function (app) {
     },
     project_type:{
       type: DataTypes.STRING,
-      allowNull:false,
+      allowNull:true,
     },
     probability: {
       type: DataTypes.STRING,

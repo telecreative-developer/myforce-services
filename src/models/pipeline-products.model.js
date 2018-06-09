@@ -32,6 +32,14 @@ module.exports = function(app) {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      quantity: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      unit_price: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }
     },
     {

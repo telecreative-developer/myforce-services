@@ -25,14 +25,13 @@ module.exports = function (app) {
       allowNull: false,
       defaultValue: false
     },
-    lose: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: false
-    },
     month: {
       type: DataTypes.INTEGER,
       allowNull: false
+    },
+    install_date: {
+      type: DataTypes.DATE,
+      allowNull: true
     },
     year: {
       type: DataTypes.INTEGER,
@@ -43,8 +42,28 @@ module.exports = function (app) {
       defaultValue: false,
       allowNull: false
     },
+    project_type:{
+      type: DataTypes.STRING,
+      allowNull:true,
+    },
+    probability: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     reject_message: {
       type: DataTypes.TEXT,
+      allowNull: true
+    },
+    drop: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    close: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    lose: {
+      type: DataTypes.BOOLEAN,
       allowNull: true
     },
     id_customer: {

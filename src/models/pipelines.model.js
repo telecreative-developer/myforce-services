@@ -86,6 +86,18 @@ module.exports = function (app) {
       type: DataTypes.INTEGER,
       defaultValue: 0,
       allowNull: false
+    },
+    integration_date: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    integration_status: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    integration_message: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     hooks: {

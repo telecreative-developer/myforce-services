@@ -101,7 +101,7 @@ module.exports = function (app) {
     },
     pipeline_number: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   }, {
     hooks: {

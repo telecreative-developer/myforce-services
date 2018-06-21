@@ -29,6 +29,12 @@ module.exports = function(app) {
         type: DataTypes.INTEGER,
         allowNull: false
       },
+      target_pipeline_month:{
+        type: DataTypes.INTEGER,
+      },
+      target_pipeline_revenue_month:{
+        type: DataTypes.INTEGER
+      },
       year: {
         type: DataTypes.INTEGER,
         allowNull: false,

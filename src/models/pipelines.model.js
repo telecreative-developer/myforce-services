@@ -98,6 +98,10 @@ module.exports = function (app) {
     integration_message: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    pipeline_number: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   }, {
     hooks: {

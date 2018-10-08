@@ -43,3 +43,125 @@ Untuk tahapan pengembangan atau development mode caranya sebagai berikut:
 
 ### 4. Menjalankan aplikasi
 ```cd myforce-services && pm2 start src/```
+
+# Endpoints
+
+### Answers
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/answers
+
+### Branches
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/branches
+
+### checks
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/checks
+
+### customers
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/customers
+
+### events
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/events
+
+### invoices
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/invoices
+
+### managers
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/managers
+
+### pics
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/pics
+
+### pipeline-products
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/pipeline-products
+
+### pipelines
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/pipelines
+
+### points
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/points
+
+### products
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/products
+
+### questions
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/questions
+
+### selling-process
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/selling-process
+
+### subproducts
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/subproducts
+
+### targets
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/targets
+
+### team-updates
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/team-updates
+
+### upload-avatar-user
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/upload-avatar-user
+
+### upload-cover-user
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/upload-cover-user
+
+### users
+
+#### Resource Types (POST, GET, UPDATE, DELETE)
+
+http://localhost/users
